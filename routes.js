@@ -1,7 +1,7 @@
 import { createDrawerNavigator, createStackNavigator } from "react-navigation";
 import Home from "./screens/Home";
 import Wallet from "./screens/Wallet";
-import sideMenu from "./screens/sideMenu";
+import SideMenu from "./sideMenu/SideMenu";
 
 const navigate = createStackNavigator({
   Home: { screen: Home },
@@ -13,9 +13,8 @@ const stack = createDrawerNavigator(
     navigate: { screen: navigate }
   },
   {
-    contentComponent: sideMenu,
-    drawerWidth: 250,
-    gesturesEnabled: false
+    contentComponent: SideMenu,
+    drawerWidth: 300
   }
 );
 
